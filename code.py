@@ -49,9 +49,3 @@ while True:
         gamepad.move_joysticks(y=127)
     else:
         gamepad.move_joysticks(y=-127)
-    
-        
-    # if bottone2.value:
-     #   gamepad.press_buttons(2)
-    #else:
-     #   gamepad.release_buttons(2)
