@@ -27,11 +27,13 @@ while True:
     gamepad.move_joysticks(x=int(-(sterzo.value / 65535 * 254 - 127)), r_z=int(-(freno.value / 65535 * 254 - 127)), z=int(-(acceleratore.value / 65535 * 254 - 127)))
     time.sleep(0.001)
     
+    #debug stuff :)
     #(acceleratore.value / 65535 * -127 + 127)
     #(((freno.value - 65535 )/ 65535 )* -127 - 127)
     #print("freno", (-(freno.value / 65535 * 254 - 127)))
     #print(acceleratore.value / 65535 * -127 + 127)
     #print(freno.value)
+    
     if bottone1.value:
         gamepad.press_buttons(1)
     else:
