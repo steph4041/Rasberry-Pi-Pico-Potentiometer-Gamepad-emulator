@@ -1,8 +1,8 @@
 # boot.py
 import usb_hid
 
-# This is only one example of a gamepad descriptor.
-# It may not suit your needs, or be supported on your host computer.
+# This is a basic gamepad descriptor.
+# It may not be supported on your host computer.
 
 GAMEPAD_REPORT_DESCRIPTOR = bytes((
     0x05, 0x01,  # Usage Page (Generic Desktop Ctrls)
