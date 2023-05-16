@@ -1,7 +1,7 @@
 # Rasberry-Pi-Pico-Potentiometer-Gamepad-emulator
 the code is in circuitpython and it uses 4 buttons and 3 potentiometers to emulate a little joystick for assetto corsa (or any game that lets you modify the gamepad settings) 
 
-The buttons are in GPIO 16, 0, 1, 2 (they need to be connected to 3.3V and GND) 
+The buttons are in GPIO 16, 0, 1, 2 (they need to be connected to 3.3V on one side, and their GPIO pin on the other) 
 
 Potentiometers are in GPIO 26, 27, 28
 
