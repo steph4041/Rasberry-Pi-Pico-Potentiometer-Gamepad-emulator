@@ -7,7 +7,7 @@ Potentiometers are in GPIO 26, 27, 28
 
 NOTE: all variables names are in italian (I'm lazy)
 
-To use the script, install circuitpython on your Rasberry pi pico, and once you have restarted it it should be as easy as drag and drop (assuming you connected everything correctly)
+To use this script, install circuitpython on your Rasberry pi pico and restart it. Then it should be as easy as drag and drop (assuming you connected everything correctly)
 
 To verify if the script is working, just open any app that let you see the gamepads connected (even the windows game device configuration will be fine) and you should see a gamepad called "CircuitPython HID".
 
