@@ -1,9 +1,9 @@
 # Rasberry-Pi-Pico-Potentiometer-Gamepad-emulator
 the code is in circuitpython and it uses 4 buttons and 3 potentiometers to emulate a little joystick for assetto corsa (or any game that lets you modify the gamepad settings) 
 
-The buttons are in GPIO 16, 0, 1, 2 (they need to be connected to 3.3V on one side, and their GPIO pin on the other) 
+The buttons are in GPIOs 16, 0, 1, 2 (they need to be connected to 3.3V on one side, and their GPIO pin on the other) 
 
-Potentiometers are in GPIO 26, 27, 28
+Potentiometers are in GPIOs 26, 27, 28
 
 NOTE: all variables names are in italian (I'm lazy)
 
@@ -17,4 +17,4 @@ I know that the lib/adafruit_hid folder is very messy but I don't really want to
 WARNING
 The variable called "frizione" (clutch in english) is translated into a joystick axis because that's what a lot of games use.
 If you want the clutch to be another potentiometer buy a rasberry pi with more ADCs.
-If the clutch isnt recoglised, open the script and remove the # below "if frizione.value:"; this will move the clutch alongside the "sterzo" (steering in english)(only moves when the button is pressed)
+If the clutch isnt recognized, open the script and remove the # below "if frizione.value:"; this will move the clutch alongside the "sterzo" (steering in english)(only moves when the button is pressed)
