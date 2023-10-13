@@ -24,16 +24,27 @@ from hid_gamepad import Gamepad
 import usb_hid
 gamepad = Gamepad(usb_hid.devices)
 while True:
-    gamepad.move_joysticks(x=int(-(sterzo.value / 65535 * 254 - 127)), r_z=int(-(freno.value / 65535 * 254 - 127)), z=int(-(acceleratore.value / 65535 * 254 - 127)))
+    
+    D=int(-(sterzo.value / 65535 * 254 - 127))
     time.sleep(0.001)
     
-    #debug stuff :)
+    P=int(-(sterzo.value / 65535 * 254 - 127))
+    time.sleep(0.001)
+    
+    R=int(-(sterzo.value / 65535 * 254 - 127))
+    M=int((D+P+R)/3)
+    
+    #print(M)
+    #gamepad.move_joysticks(x=int(-(sterzo.value / 65535 * 254 - 127)), r_z=int(-(freno.value / 65535 * 254 - 127)), z=int(-(acceleratore.value / 65535 * 254 - 127)))
+    gamepad.move_joysticks(x=M, r_z=int(-(freno.value / 65535 * 254 - 127)), z=int(-(acceleratore.value / 65535 * 254 - 127)))
+    time.sleep(0.001)
+    
     #(acceleratore.value / 65535 * -127 + 127)
     #(((freno.value - 65535 )/ 65535 )* -127 - 127)
     #print("freno", (-(freno.value / 65535 * 254 - 127)))
     #print(acceleratore.value / 65535 * -127 + 127)
+    #print(-(sterzo.value / 65535 * 254 - 127))
     #print(freno.value)
-    
     if bottone1.value:
         gamepad.press_buttons(1)
     else:
@@ -51,3 +62,11 @@ while True:
         gamepad.move_joysticks(y=127)
     else:
         gamepad.move_joysticks(y=-127)
+    
+    
+    
+        
+    # if bottone2.value:
+     #   gamepad.press_buttons(2)
+    #else:
+     #   gamepad.release_buttons(2)
